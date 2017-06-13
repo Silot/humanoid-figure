@@ -25,6 +25,23 @@ module.exports = function () {
     ],
     cells: cells
   }
+  var rfootmat = mat4.identity([])
+  shapes.RFOOT = {
+    parent: 'RLEG',
+    matrix: mat4.rotateY(rfootmat,rfootmat,-0.2),
+    pivot: [+0.6,-0.91,0],
+    positions: [
+      [+0.02,-1,-0.29],
+      [+0.03,-1,+0.07],
+      [+0.1,-1,+0.07],
+      [+0.15,-1,-0.23],
+      [+0.02,-0.95,-0.29],
+      [+0.03,-0.9,+0.06],
+      [+0.1,-0.9,+0.06],
+      [+0.15,-0.97,-0.23]
+    ],
+    cells: cells
+  }
   shapes.LLEG = {
     parent: 'LTHIGH',
     matrix: mat4.identity([]),
@@ -38,6 +55,22 @@ module.exports = function () {
       [-0.04,-0.48,-0.07],
       [-0.15,-0.48,-0.07],
       [-0.12,-0.48,+0.05],
+    ],
+    cells: cells
+  }
+  shapes.RLEG = {
+    parent: 'RTHIGH',
+    matrix: mat4.identity([]),
+    pivot: [+0.08,-0.5,-0.01],
+    positions: [
+      [+0.12,-0.9,+0.05],
+      [+0.15,-0.9,-0.07],
+      [+0.04,-0.9,-0.07],
+      [+0.01,-0.9,+0.05],
+      [+0.12,-0.48,+0.05],
+      [+0.15,-0.48,-0.07],
+      [+0.04,-0.48,-0.07],
+      [+0.01,-0.48,+0.05]
     ],
     cells: cells
   }
@@ -56,6 +89,24 @@ module.exports = function () {
       [-0.12,+0.1,-0.05],
       [-0.19,+0.1,-0.02],
       [-0.16,+0.1,+0.03],
+    ],
+    cells: cells
+  }
+  var rthighmat = mat4.identity([])
+  mat4.rotateZ(rthighmat,rthighmat,-0.15)
+  mat4.rotateX(rthighmat,rthighmat,0.1)
+  shapes.RTHIGH = {
+    matrix: rthighmat,
+    pivot: [0,0,0],
+    positions: [
+      [+0.20,-0.48,+0.06],
+      [+0.23,-0.48,-0.04],
+      [+0.12,-0.48,-0.06],
+      [+0.09,-0.48,+0.05],
+      [+0.16,+0.1,+0.03],
+      [+0.19,+0.1,-0.02],
+      [+0.12,+0.1,-0.05],
+      [+0.07,+0.1,+0.05],
     ],
     cells: cells
   }
