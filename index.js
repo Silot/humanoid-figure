@@ -7,7 +7,7 @@ module.exports = function () {
   shapes.LFOOT = {
     parent: 'LLEG',
     matrix: mat4.rotateY(lfootmat,lfootmat,0.2),
-    origin: [-0.6,-0.91,0],
+    pivot: [-0.6,-0.91,0],
     positions: [
       [-0.15,-1,-0.23],
       [-0.1,-1,+0.07],
@@ -28,7 +28,7 @@ module.exports = function () {
   shapes.LLEG = {
     parent: 'LTHIGH',
     matrix: mat4.identity([]),
-    origin: [-0.08,-0.5,-0.01],
+    pivot: [-0.08,-0.5,-0.01],
     positions: [
       [-0.01,-0.9,+0.05],
       [-0.04,-0.9,-0.07],
@@ -50,7 +50,7 @@ module.exports = function () {
   mat4.rotateX(lthighmat,lthighmat,0.1)
   shapes.LTHIGH = {
     matrix: lthighmat,
-    origin: [0,0,0],
+    pivot: [0,0,0],
     positions: [
       [-0.11+0.02,-0.48,+0.05],
       [-0.14+0.02,-0.48,-0.06],
@@ -73,7 +73,6 @@ module.exports = function () {
       vec3.transformMat4(p,p,shape.matrix)
     })
     shape.matrix = mat4.identity([])
-    //mat4.translate(shape.matrix,shape.matrix,[-shape.origin[0],-shape.origin[1],-shape.origin[2]])
   })
   return shapes
 }
