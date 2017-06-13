@@ -78,6 +78,7 @@ module.exports = function () {
   mat4.rotateZ(lthighmat,lthighmat,0.15)
   mat4.rotateX(lthighmat,lthighmat,0.1)
   shapes.LTHIGH = {
+    parent: 'PELVIS',
     matrix: lthighmat,
     pivot: [0,0,0],
     positions: [
@@ -96,6 +97,7 @@ module.exports = function () {
   mat4.rotateZ(rthighmat,rthighmat,-0.15)
   mat4.rotateX(rthighmat,rthighmat,0.1)
   shapes.RTHIGH = {
+    parent: 'PELVIS',
     matrix: rthighmat,
     pivot: [0,0,0],
     positions: [
@@ -107,6 +109,37 @@ module.exports = function () {
       [+0.19,+0.1,-0.02],
       [+0.12,+0.1,-0.05],
       [+0.07,+0.1,+0.05],
+    ],
+    cells: cells
+  }
+  shapes.PELVIS = {
+    parent: 'SPINE',
+    matrix: mat4.identity([]),
+    pivot: [0,0,0],
+    positions: [
+      [+0.07,+0.0,+0.06],
+      [+0.07,+0.0,-0.04],
+      [-0.07,+0.0,-0.04],
+      [-0.07,+0.0,+0.06],
+      [+0.17,+0.2,+0.1],
+      [+0.17,+0.2,-0.04],
+      [-0.17,+0.2,-0.04],
+      [-0.17,+0.2,+0.1],
+    ],
+    cells: cells
+  }
+  shapes.SPINE = {
+    matrix: mat4.identity([]),
+    pivot: [0,0,0],
+    positions: [
+      [+0.04,+0.2,+0.06],
+      [+0.04,+0.2,-0.02],
+      [-0.04,+0.2,-0.02],
+      [-0.04,+0.2,+0.06],
+      [+0.04,+0.4,+0.06],
+      [+0.04,+0.4,-0.02],
+      [-0.04,+0.4,-0.02],
+      [-0.04,+0.4,+0.06],
     ],
     cells: cells
   }
