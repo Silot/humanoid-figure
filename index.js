@@ -352,6 +352,54 @@ module.exports = function () {
     ],
     cells: cells
   }
+  shapes.NECK = {
+    parent: 'CHEST',
+    matrix: mat4.identity([]),
+    pivot: [0,0,0],
+    positions: [
+      [+0.04,+0.65,+0.06],
+      [+0.04,+0.65,-0.02],
+      [-0.04,+0.65,-0.02],
+      [-0.04,+0.65,+0.06],
+      [+0.04,+0.8,+0.06],
+      [+0.04,+0.8,-0.02],
+      [-0.04,+0.8,-0.02],
+      [-0.04,+0.8,+0.06]
+    ],
+    cells: cells
+  }
+  shapes.HEAD = {
+    parent: 'NECK',
+    matrix: mat4.identity([]),
+    pivot: [0,0,0],
+    positions: [
+      [+0.08,+0.8,+0.1],
+      [+0.08,+0.8,-0.12],
+      [-0.08,+0.8,-0.12],
+      [-0.08,+0.8,+0.1],
+      [+0.08,+1.0,+0.1],
+      [+0.08,+1.0,-0.1],
+      [-0.08,+1.0,-0.1],
+      [-0.08,+1.0,+0.1]
+    ],
+    cells: cells
+  }
+  shapes.JAW = {
+    parent: 'HEAD',
+    matrix: mat4.identity([]),
+    pivot: [0,0,0],
+    positions: [
+      [+0.05,+0.75,-0.06],
+      [+0.05,+0.75,-0.1],
+      [-0.05,+0.75,-0.1],
+      [-0.05,+0.75,-0.06],
+      [+0.06,+0.8,-0.03],
+      [+0.06,+0.8,-0.12],
+      [-0.06,+0.8,-0.12],
+      [-0.06,+0.8,-0.03]
+    ],
+    cells: cells
+  }
   Object.keys(shapes).forEach(function (key) {
     var shape = shapes[key]
     shape.positions.forEach(function (p) {
