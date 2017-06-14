@@ -208,6 +208,54 @@ module.exports = function () {
     ],
     cells: cells
   }
+  shapes.LPROXIMAL = {
+    parent: 'LPALM',
+    matrix: mat4.identity([]),
+    pivot: [0,0,0],
+    positions: [
+      [-0.22,-0.15,+0.03],
+      [-0.22,-0.15,-0.04],
+      [-0.24,-0.15,-0.04],
+      [-0.24,-0.15,+0.03],
+      [-0.22,-0.1,+0.04],
+      [-0.22,-0.1,-0.05],
+      [-0.24,-0.1,-0.05],
+      [-0.24,-0.1,+0.04]
+    ],
+    cells: cells
+  }
+  shapes.LMIDDLEDISTAL = {
+    parent: 'LPROXIMAL',
+    matrix: mat4.identity([]),
+    pivot: [0,0,0],
+    positions: [
+      [-0.22,-0.2,+0.02],
+      [-0.22,-0.2,-0.03],
+      [-0.23,-0.2,-0.03],
+      [-0.23,-0.2,+0.02],
+      [-0.22,-0.15,+0.03],
+      [-0.22,-0.15,-0.04],
+      [-0.24,-0.15,-0.04],
+      [-0.24,-0.15,+0.03]
+    ],
+    cells: cells
+  }
+  shapes.LTHUMB = {
+    parent: 'LPALM',
+    matrix: mat4.identity([]),
+    pivot: [0,0,0],
+    positions: [
+      [-0.21,-0.15,-0.08],
+      [-0.21,-0.14,-0.10],
+      [-0.23,-0.14,-0.10],
+      [-0.23,-0.15,-0.08],
+      [-0.21,-0.08,-0.04],
+      [-0.21,-0.02,-0.035],
+      [-0.23,-0.02,-0.035],
+      [-0.23,-0.08,-0.04]
+    ],
+    cells: cells
+  }
   Object.keys(shapes).forEach(function (key) {
     var shape = shapes[key]
     shape.positions.forEach(function (p) {
