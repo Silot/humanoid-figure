@@ -80,7 +80,7 @@ module.exports = function () {
   shapes.LTHIGH = {
     parent: 'PELVIS',
     matrix: lthighmat,
-    pivot: [0,0,0],
+    pivot: [-0.14,0.07,0],
     positions: [
       [-0.09,-0.48,+0.05],
       [-0.12,-0.48,-0.06],
@@ -99,7 +99,7 @@ module.exports = function () {
   shapes.RTHIGH = {
     parent: 'PELVIS',
     matrix: rthighmat,
-    pivot: [0,0,0],
+    pivot: [0.14,0.07,0],
     positions: [
       [+0.20,-0.48,+0.06],
       [+0.23,-0.48,-0.04],
@@ -115,7 +115,7 @@ module.exports = function () {
   shapes.PELVIS = {
     parent: 'SPINE',
     matrix: mat4.identity([]),
-    pivot: [0,0,0],
+    pivot: [0,0.2,0],
     positions: [
       [+0.07,+0.0,+0.06],
       [+0.07,+0.0,-0.04],
@@ -130,7 +130,7 @@ module.exports = function () {
   }
   shapes.SPINE = {
     matrix: mat4.identity([]),
-    pivot: [0,0,0],
+    pivot: [0,0.25,0],
     positions: [
       [+0.04,+0.2,+0.06],
       [+0.04,+0.2,-0.02],
@@ -147,7 +147,7 @@ module.exports = function () {
   shapes.CHEST = {
     parent: 'SPINE',
     matrix: mat4.rotateX(chestmat,chestmat,0.1),
-    pivot: [0,0,0],
+    pivot: [0,0.3,0.03],
     positions: [
       [+0.15,+0.3,+0.06],
       [+0.15,+0.3,-0.12],
@@ -163,7 +163,7 @@ module.exports = function () {
   shapes.LARM = {
     parent: 'CHEST',
     matrix: mat4.identity([]),
-    pivot: [0,0,0],
+    pivot: [-0.21,0.65,-0.02],
     positions: [
       [-0.18,+0.25,+0.04],
       [-0.18,+0.25,-0.04],
@@ -179,7 +179,7 @@ module.exports = function () {
   shapes.LFOREARM = {
     parent: 'LARM',
     matrix: mat4.identity([]),
-    pivot: [0,0,0],
+    pivot: [-0.21,0.25,0],
     positions: [
       [-0.18,-0.0,+0.03],
       [-0.18,-0.0,-0.03],
@@ -195,7 +195,7 @@ module.exports = function () {
   shapes.LPALM = {
     parent: 'LFOREARM',
     matrix: mat4.identity([]),
-    pivot: [0,0,0],
+    pivot: [-0.22,0,0],
     positions: [
       [-0.21,-0.1,+0.04],
       [-0.21,-0.1,-0.05],
@@ -211,7 +211,7 @@ module.exports = function () {
   shapes.LPROXIMAL = {
     parent: 'LPALM',
     matrix: mat4.identity([]),
-    pivot: [0,0,0],
+    pivot: [-0.23,-0.1,0],
     positions: [
       [-0.22,-0.15,+0.03],
       [-0.22,-0.15,-0.04],
@@ -227,7 +227,7 @@ module.exports = function () {
   shapes.LMIDDLEDISTAL = {
     parent: 'LPROXIMAL',
     matrix: mat4.identity([]),
-    pivot: [0,0,0],
+    pivot: [-23,-0.15,0],
     positions: [
       [-0.22,-0.2,+0.02],
       [-0.22,-0.2,-0.03],
@@ -243,7 +243,7 @@ module.exports = function () {
   shapes.LTHUMB = {
     parent: 'LPALM',
     matrix: mat4.identity([]),
-    pivot: [0,0,0],
+    pivot: [-0.22,-0.05,-0.04],
     positions: [
       [-0.21,-0.15,-0.08],
       [-0.21,-0.14,-0.10],
@@ -259,7 +259,7 @@ module.exports = function () {
   shapes.RARM = {
     parent: 'CHEST',
     matrix: mat4.identity([]),
-    pivot: [0,0,0],
+    pivot: [0.21,0.65,-0.02],
     positions: [
       [+0.24,+0.25,+0.04],
       [+0.24,+0.25,-0.04],
@@ -275,7 +275,7 @@ module.exports = function () {
   shapes.RFOREARM = {
     parent: 'RARM',
     matrix: mat4.identity([]),
-    pivot: [0,0,0],
+    pivot: [0.21,0.25,0],
     positions: [
       [+0.24,-0.0,+0.03],
       [+0.24,-0.0,-0.03],
@@ -291,7 +291,7 @@ module.exports = function () {
   shapes.RPALM = {
     parent: 'RFOREARM',
     matrix: mat4.identity([]),
-    pivot: [0,0,0],
+    pivot: [0.22,0,0],
     positions: [
       [+0.24,-0.1,+0.04],
       [+0.24,-0.1,-0.05],
@@ -307,7 +307,7 @@ module.exports = function () {
   shapes.RPROXIMAL = {
     parent: 'RPALM',
     matrix: mat4.identity([]),
-    pivot: [0,0,0],
+    pivot: [0.23,-0.1,0],
     positions: [
       [+0.24,-0.15,+0.03],
       [+0.24,-0.15,-0.04],
@@ -323,7 +323,7 @@ module.exports = function () {
   shapes.RMIDDLEDISTAL = {
     parent: 'RPROXIMAL',
     matrix: mat4.identity([]),
-    pivot: [0,0,0],
+    pivot: [-23,-0.15,0],
     positions: [
       [+0.23,-0.2,+0.02],
       [+0.23,-0.2,-0.03],
@@ -339,7 +339,7 @@ module.exports = function () {
   shapes.RTHUMB = {
     parent: 'RPALM',
     matrix: mat4.identity([]),
-    pivot: [0,0,0],
+    pivot: [-0.22,-0.05,-0.04],
     positions: [
       [+0.23,-0.15,-0.08],
       [+0.23,-0.14,-0.10],
@@ -355,7 +355,7 @@ module.exports = function () {
   shapes.NECK = {
     parent: 'CHEST',
     matrix: mat4.identity([]),
-    pivot: [0,0,0],
+    pivot: [0,0.65,0.04],
     positions: [
       [+0.04,+0.65,+0.06],
       [+0.04,+0.65,-0.02],
@@ -371,7 +371,7 @@ module.exports = function () {
   shapes.HEAD = {
     parent: 'NECK',
     matrix: mat4.identity([]),
-    pivot: [0,0,0],
+    pivot: [0,0.8,-0.01],
     positions: [
       [+0.08,+0.8,+0.1],
       [+0.08,+0.8,-0.12],
@@ -381,22 +381,6 @@ module.exports = function () {
       [+0.08,+1.0,-0.1],
       [-0.08,+1.0,-0.1],
       [-0.08,+1.0,+0.1]
-    ],
-    cells: cells
-  }
-  shapes.JAW = {
-    parent: 'HEAD',
-    matrix: mat4.identity([]),
-    pivot: [0,0,0],
-    positions: [
-      [+0.05,+0.75,-0.06],
-      [+0.05,+0.75,-0.1],
-      [-0.05,+0.75,-0.1],
-      [-0.05,+0.75,-0.06],
-      [+0.06,+0.8,-0.03],
-      [+0.06,+0.8,-0.12],
-      [-0.06,+0.8,-0.12],
-      [-0.06,+0.8,-0.03]
     ],
     cells: cells
   }
