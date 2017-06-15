@@ -65,6 +65,59 @@ regl.frame(function (context) {
 })
 ```
 
+# api
+
+``` js
+var figure = require('humanoid-figure')
+var fmatrix = require('humanoid-figure/matrix')
+```
+
+## figure
+
+Object mapping shape names to shapes.
+
+The shape names are:
+
+* chest
+* head
+* larm
+* lfoot
+* lforearm
+* lleg
+* lmiddledistal
+* lpalm
+* lproximal
+* lthigh
+* lthumb
+* neck
+* pelvis
+* rarm
+* rfoot
+* rforearm
+* rleg
+* rmiddledistal
+* rpalm
+* rproximal
+* rthigh
+* rthumb
+* spine
+
+Each shape has:
+
+* shape.pivot - coordinate to pivot rotation about
+* shape.matrix - matrix to store shape rotations
+* shape.parent - name of parent shape, if applicable
+* shape.positions - geometry verticies
+* shape.cells - geometry triangle vertex indicies
+
+## fmatrix(models, figure)
+
+Calculate model matricies for each shape in the figure given each shape's
+matrix, pivot point, and parent shape.
+
+If a model matrix doesn't exist it will be allocated. Otherwise existing model
+matricies will be reused. Returns `models`.
+
 # install
 
 npm install humanoid-figure
